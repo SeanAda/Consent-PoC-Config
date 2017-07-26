@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
