@@ -7,15 +7,15 @@ eureka:
       defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
 
 spring:
-	datasource:
-		url: jdbc:h2:mem:test
-		driverClassName: org.h2.Driver
-		username: sa
-		password:
-	jpa:
-		database-platform: org.hibernate.dialect.H2Dialect
-		hibernate.ddl-auto: create
-	h2:
-		console:
-			enabled: true
-			path: /console/
+  datasource:
+    url: jdbc:h2:mem:test
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: create
+  h2:
+    console:
+      enabled: true
+      path: /console/
