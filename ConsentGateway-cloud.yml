@@ -8,7 +8,8 @@ eureka:
   instance:
     preferIpAddress: false
     hostname: consent-poc-consent-gateway.cfapps.sap.hana.ondemand.com
-    securePort: 443
     nonSecurePortEnabled: false
+    securePort: 443
     securePortEnabled: true
+    statusPageUrl: https://consent-poc-consent-gateway.cfapps.sap.hana.ondemand.com/info
      
