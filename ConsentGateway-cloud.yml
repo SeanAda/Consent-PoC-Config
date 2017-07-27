@@ -5,3 +5,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
+  instance:
+     hostname: ${APPLICATION_DOMAIN}
+     
