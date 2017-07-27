@@ -6,5 +6,6 @@ eureka:
     serviceUrl:
       defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
+    hostname: http://consent-poc-consent-gateway.cfapps.sap.hana.ondemand.com
      
