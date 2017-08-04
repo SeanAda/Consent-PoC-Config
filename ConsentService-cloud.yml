@@ -7,24 +7,17 @@ eureka:
       defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
   instance:
     preferIpAddress: false
-    hostname: consent-poc-consent-service.cfapps.sap.hana.ondemand.com
+    hostname: ${vcap.application.uris[0]}
     nonSecurePortEnabled: false
     securePort: 443
     securePortEnabled: true
     statusPageUrl: ${eureka.instance.hostname}/info
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${eureka.instance.securePort}}
 
 spring:
   datasource:
-    url: jdbc:h2:mem:test
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: ${vcap.services.DB.credentials.jdbcUrl}
+    username: ${vcap.services.DB.credentials.username}
+    password: ${vcap.services.DB.credentials.password}
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate.ddl-auto: create
-  h2:
-    console:
-      enabled: true
-      path: /console/
