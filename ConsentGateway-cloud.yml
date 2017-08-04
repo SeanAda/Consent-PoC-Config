@@ -11,7 +11,7 @@ eureka:
     nonSecurePortEnabled: false
     securePort: 443
     securePortEnabled: true
-    statusPageUrl: https://consent-poc-consent-gateway.cfapps.sap.hana.ondemand.com/info
+    statusPageUrl: ${eureka.instance.hostname}/info
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${eureka.instance.securePort}}
      

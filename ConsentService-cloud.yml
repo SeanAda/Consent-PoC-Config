@@ -5,6 +5,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
+  instance:
+    preferIpAddress: false
+    hostname: consent-poc-consent-service.cfapps.sap.hana.ondemand.com
+    nonSecurePortEnabled: false
+    securePort: 443
+    securePortEnabled: true
+    statusPageUrl: ${eureka.instance.hostname}/info
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${eureka.instance.securePort}}
 
 spring:
   datasource:
