@@ -19,5 +19,4 @@ spring:
     username: ${vcap.services.DB.credentials.username}
     password: ${vcap.services.DB.credentials.password}
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
     hibernate.ddl-auto: create
