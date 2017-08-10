@@ -5,6 +5,13 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://consent-poc-eureka-server.cfapps.sap.hana.ondemand.com/eureka
+  instance:
+    preferIpAddress: false
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePortEnabled: false
+    securePort: 443
+    securePortEnabled: true
+    statusPageUrl: ${eureka.instance.hostname}/info
 
 turbine:
   aggregator:
