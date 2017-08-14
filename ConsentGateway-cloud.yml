@@ -12,4 +12,3 @@ eureka:
     securePort: 443
     securePortEnabled: true
     statusPageUrl: ${eureka.instance.hostname}/info
-     
