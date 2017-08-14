@@ -20,3 +20,4 @@ spring:
     password: ${vcap.services.DB.credentials.password}
   jpa:
     hibernate.ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
